@@ -24,7 +24,7 @@ export default defineConfig({
     host: true,
     proxy: {
       "/api": {
-        target: "http://localhost:8080",
+        target: "https://vp-finance-mc2l.onrender.com",
         changeOrigin: true,
         secure: false,
       },
