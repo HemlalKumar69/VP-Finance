@@ -1,0 +1,1002 @@
+/* Dashboard.css */
+.dashboard-page {
+    padding: 24px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Header Section */
+.table-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 24px;
+    text-align: left;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 12px;
+}
+
+/* Cards Section */
+.today-call-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.card {
+    padding: 20px 16px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Cards Section - Professional Colors */
+.card.total {
+    background: #495057;
+}
+
+/* Dark Gray */
+.card.balance {
+    background: #6c757d;
+}
+
+/* Medium Gray */
+.card.forwarded {
+    background: #0d6efd;
+}
+
+/* Blue */
+.card.callback {
+    background: #fd7e14;
+}
+
+/* Orange */
+.card.closed {
+    background: #dc3545;
+}
+
+/* Red */
+.card.success {
+    background: #198754;
+}
+
+/* Green */
+
+/* Tab Navigation */
+.tab-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background: white;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+.tab-nav button {
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    color: #6c757d;
+    border-radius: 4px;
+}
+
+.tab-nav button:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tab-nav button.active {
+    background: #0d6efd;
+    color: #fff;
+}
+
+.analytics-tab {
+    background: transparent;
+}
+
+/* Advanced Filters */
+.advanced-filters {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    border: 1px solid #dee2e6;
+}
+
+.filter-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 2px;
+}
+
+.filter-input,
+.filter-select {
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    transition: border-color 0.15s ease;
+    font-family: inherit;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-color: #0d6efd;
+}
+
+.filter-input::placeholder {
+    color: #6c757d;
+}
+
+.filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.clear-filters-btn {
+    padding: 8px 16px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.15s ease;
+}
+
+.clear-filters-btn:hover {
+    background: #5a6268;
+}
+
+.filter-results {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: 500;
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Summary Info */
+.summary-info {
+    background: #0d6efd;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Refresh Button */
+.refresh-btn {
+    padding: 10px 20px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.15s ease;
+}
+
+.refresh-btn:hover:not(:disabled) {
+    background: #0b5ed7;
+}
+
+.refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Table Container */
+.table-container {
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+/* Task Table */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
+.task-table th {
+    background: #f8f9fa;
+    padding: 12px;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+    font-size: 13px;
+    text-align: left;
+}
+
+.task-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 14px;
+}
+
+.task-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Next Call Date and Time Styling */
+.next-call-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0d6efd;
+    background: #e7f1ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.next-call-time {
+    font-size: 13px;
+    font-weight: 600;
+    color: #198754;
+    background: #d1e7dd;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Clickable Cells */
+.clickable {
+    color: #0d6efd;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.clickable:hover {
+    color: #0b5ed7;
+    text-decoration: underline;
+}
+
+/* Suspect Name */
+.suspect-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.callback-indicator {
+    color: #fd7e14;
+    font-size: 12px;
+}
+
+.success-indicator {
+    color: #198754;
+    font-size: 12px;
+}
+
+/* Area Badge */
+.area-badge {
+    background: #e7f1ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0d6efd;
+}
+
+/* Mobile Cell */
+.mobile-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #212529;
+}
+
+.call-icon {
+    text-decoration: none;
+    font-size: 14px;
+    color: #198754;
+    transition: color 0.15s ease;
+}
+
+.call-icon:hover {
+    color: #157347;
+}
+
+/* Activity Date */
+.activity-date {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+}
+
+.status-badge.success {
+    background: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.status-badge.warning {
+    background: #fff3cd;
+    color: #664d03;
+    border: 1px solid #ffecb5;
+}
+
+.status-badge.danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f1aeb5;
+}
+
+.status-badge.info {
+    background: #cfe2ff;
+    color: #052c65;
+    border: 1px solid #9ec5fe;
+}
+
+.status-badge.secondary {
+    background: #e2e3e5;
+    color: #2b2f32;
+    border: 1px solid #c4c8cb;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.15s ease;
+}
+
+.btn-sm:hover {
+    opacity: 0.9;
+}
+
+.btn-success {
+    background: #198754;
+    color: #fff;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    color: #fff;
+}
+
+.btn-call {
+    background: transparent;
+    color: #198754;
+    border: 1px solid #198754;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.btn-call:hover {
+    background: #198754;
+    color: white;
+}
+
+/* Action Panel */
+.action-panel {
+    background: white;
+    border: 1px solid #dee2e6;
+    padding: 0;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    min-width: 500px;
+    overflow: hidden;
+}
+
+.action-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    background: #f8f9fa;
+    padding: 16px 20px;
+    color: #495057;
+    font-size: 14px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.close-btn:hover:not(:disabled) {
+    background: #e9ecef;
+}
+
+.action-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-row label {
+    min-width: 120px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-row input,
+.form-row select {
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.15s ease;
+    font-family: inherit;
+    flex: 1;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    outline: none;
+    border-color: #0d6efd;
+}
+
+.action-buttons-panel {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.cancel-btn {
+    padding: 10px 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.15s ease;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background: #198754;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.15s ease;
+}
+
+.cancel-btn:hover:not(:disabled),
+.submit-btn:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+/* Spinner */
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading States */
+.text-center {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+/* Next Action Styling */
+.next-action-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+/* Appointment Action */
+.next-action-info.appointment {
+    background: #d1e7dd;
+    border: 1px solid #badbcc;
+}
+
+.appointment-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.appointment-action .action-icon {
+    color: #198754;
+    font-size: 14px;
+}
+
+.appointment-action .action-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f5132;
+}
+
+.appointment-action .action-time {
+    font-size: 11px;
+    color: #0f5132;
+    background: #a3cfbb;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Call Action */
+.next-action-info.call {
+    background: #cfe2ff;
+    border: 1px solid #9ec5fe;
+}
+
+.call-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.call-action .action-icon {
+    color: #0d6efd;
+    font-size: 14px;
+}
+
+.call-action .action-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #052c65;
+}
+
+.call-action .action-time {
+    font-size: 11px;
+    color: #052c65;
+    background: #9ec5fe;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.no-action {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Hover effects */
+.next-action-info.appointment:hover {
+    background: #bcd0c7;
+}
+
+.next-action-info.call:hover {
+    background: #b6d4fe;
+}
+
+/* Appointment Info */
+.appointment-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    padding: 4px;
+}
+
+.appointment-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #dc3545;
+    background: #f8d7da;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid #f1aeb5;
+}
+
+.appointment-time {
+    font-size: 11px;
+    font-weight: 500;
+    color: #721c24;
+    background: #f1aeb5;
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.appointment-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #198754;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    border: 2px solid white;
+}
+
+.no-appointment {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Highlight row with appointment */
+.task-table tbody tr:hover .appointment-date {
+    background: #f5c2c7;
+}
+
+.task-table tbody tr:hover .appointment-time {
+    background: #e99da6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .filter-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-page {
+        padding: 16px;
+    }
+
+    .today-call-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .filter-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tab-nav {
+        flex-direction: column;
+    }
+
+    .tab-nav button {
+        text-align: left;
+    }
+
+    .action-panel {
+        min-width: 90%;
+        margin: 10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .form-row label {
+        min-width: auto;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .task-table {
+        font-size: 12px;
+    }
+
+    .table-container {
+        padding: 16px;
+        overflow-x: auto;
+    }
+
+    .appointment-action,
+    .call-action {
+        flex-direction: column;
+        gap: 2px;
+        text-align: center;
+    }
+
+    .action-date,
+    .action-time {
+        font-size: 10px !important;
+    }
+
+    .appointment-info {
+        flex-direction: row;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .appointment-date {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .appointment-time {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .appointment-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .today-call-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 16px 12px;
+    }
+
+    .status-badge {
+        min-width: 80px;
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .appointment-info {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
+
+/* Action Panel Styles */
+.action-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 0;
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.action-header {
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.action-body {
+    padding: 20px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+optgroup option {
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.current-status-info {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border-left: 3px solid #6c757d;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    padding: 8px 16px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    padding: 8px 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+.cancel-btn:disabled,
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Quick action buttons */
+.action-buttons .btn-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 2px;
+}
